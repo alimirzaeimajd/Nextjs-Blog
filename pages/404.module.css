@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.link {
+  margin-top: 2rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #0070f3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #0060df;
+}
