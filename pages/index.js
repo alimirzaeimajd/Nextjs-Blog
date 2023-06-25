@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import ControlledCarousel from "../components/carousel";
 
 const App = () => {
-  return <div>app</div>;
+  return (
+    <Fragment>
+      <ControlledCarousel />
+    </Fragment>
+  );
 };
 
 export default App;

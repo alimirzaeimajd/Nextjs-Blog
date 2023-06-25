@@ -7,7 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 const CustomNavbar = () => {
   return (
-    <Navbar className="bg-body-tertiary bg-green-300">
+    <Navbar className="bg-body-tertiar" style={{ backgroundColor: "#86efac" }}>
       <Container>
         <Navbar.Brand href="#home">
           <Image

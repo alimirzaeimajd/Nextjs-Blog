@@ -1,0 +1,156 @@
+.form {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  /* background: #091a20; */
+  background: linear-gradient(
+    to right,
+    rgb(236, 72, 153),
+    rgb(239, 68, 68),
+    rgb(234, 179, 8)
+  );
+  color: #fff;
+  display: grid;
+  place-content: center;
+  box-sizing: border-box;
+  background-color: rgb(21, 32, 43);
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  backdrop-filter: blur(15px);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 440px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  transition: margin-bottom 1s;
+}
+.h2:hover {
+  color: #33d9b2;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+.label {
+  color: #ffffff;
+  margin-right: auto;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.inputContainer {
+  width: 300px;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputGroup input {
+  padding: 0.8rem 3rem 0.8rem 0.8rem;
+  width: 100%;
+  background: #112d37;
+  outline: none;
+  border: 1px solid #215164;
+  border-radius: 4px;
+  color: #fff;
+  transition: width 0.9s, height 0.9s, border-radius 0.9s;
+  font-size: 16px;
+}
+
+.inputGroup input::placeholder {
+  color: #346a80;
+}
+
+.inputGroup input:focus {
+  border: 1px solid #55b7dd;
+  box-shadow: 0px 0px 2px 2px #55b7dd34;
+}
+.inputGroup .toggle {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 99;
+}
+
+.inputGroup .ripple {
+  background: #fff;
+  display: block;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  right: 10px;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.passStrength {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.strengthLabel {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.strengthPercent {
+  flex: 1;
+  height: 5px;
+  border-radius: 10px;
+  display: block;
+  background: #eee;
+}
+
+.strengthPercent span {
+  display: block;
+  height: 100%;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+
+.weak {
+  background: red;
+  width: 33%;
+}
+
+.average {
+  background: #ffd000;
+  width: 66%;
+}
+
+.strong {
+  background: green;
+  width: 100%;
+}
+.username {
+  margin-bottom: 40px;
+  background-color: #e5e5e5;
+  border: #e5e5e5;
+  border-radius: 4px;
+  padding: 0.8rem 3rem 0.8rem 0.8rem;
+  font-size: 16px;
+}
+.button {
+  border-radius: 10px;
+  border: #ffffff;
+  padding: 15px;
+  margin-top: 40px;
+}
+.button:hover {
+  background: rgb(59, 130, 246);
+  color: white;
+}
