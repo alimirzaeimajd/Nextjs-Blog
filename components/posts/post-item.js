@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./post-item.module.css";
 
 const PostItem = (props) => {
@@ -16,13 +16,19 @@ const PostItem = (props) => {
 
   const linkPath = `/posts/${slug}`;
   return (
-    <li className={styles.post}>
+    <li className={`${styles.post} rounded-xl hover:bg-rose-700`}>
       <Link href={linkPath}>
-        <div className={styles.image}>
-          <Image src={imagePath} alt={title} width={300} height={200} />
+        <div className={`${styles.image} border-t-rose-400`}>
+          <Image
+            src={imagePath}
+            alt={title}
+            width={400}
+            height={200}
+            layout="responsive"
+          />
         </div>
-        <div className={styles.content}>
-          <h3>{title}</h3>
+        <div className={`${styles.content}`}>
+          <h3 className="text-teal-200">{title}</h3>
           <time>{formattedDate}</time>
           <p>{excerpt}</p>
         </div>
