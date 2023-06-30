@@ -16,9 +16,11 @@ const PostItem = (props) => {
 
   const linkPath = `/posts/${slug}`;
   return (
-    <li className={`${styles.post} rounded-xl hover:bg-rose-700`}>
-      <Link href={linkPath}>
-        <div className={`${styles.image} border-t-rose-400`}>
+    <li
+      className={`${styles.post} rounded-xl hover:bg-rose-700 mt-8 items-center`}
+    >
+      <Link href={linkPath} className="hover:text-slate-900 bold font-bold">
+        <div className={`${styles.image} rounded-t-lg`}>
           <Image
             src={imagePath}
             alt={title}
@@ -28,7 +30,7 @@ const PostItem = (props) => {
           />
         </div>
         <div className={`${styles.content}`}>
-          <h3 className="text-teal-200">{title}</h3>
+          <h3 className="text-teal-200 font-black">{title}</h3>
           <time>{formattedDate}</time>
           <p>{excerpt}</p>
         </div>
