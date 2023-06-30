@@ -6,7 +6,7 @@ const CustomNavbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-green-300">
       <div className="container-fluid">
-        <Link class="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           <Image src="/favicon.ico" alt="vercel" width={30} height={24} />
         </Link>
         <button
