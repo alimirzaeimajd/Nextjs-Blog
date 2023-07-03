@@ -27,6 +27,38 @@ function EmojiPage() {
     Winky,
   ];
 
+  const emojiUniqId = [
+    "1f37b",
+    "1f483_1f3fb",
+    "1f409",
+    "1f6f8",
+    "1f618",
+    "1f606",
+    "1f62d",
+    "1f92f",
+    "1f40e",
+    "1f61c",
+  ];
+
+  const emojiName = [
+    "Clinking-beer-mugs",
+    "Dancer-woman",
+    "Dragon",
+    "Flying-saucer",
+    "Kissing-heart",
+    "Laughing",
+    "Loudly-crying",
+    "Mind-blown",
+    "Racehorse",
+    "Winky-tongue",
+  ];
+
+  const emoji = emojiUniqId.map(
+    (id) => `https://fonts.gstatic.com/s/e/notoemoji/latest/${id}/emoji.svg`
+  );
+
+  const keys = emojiUniqId.map((id) => `${id}`);
+
   const [randomObject, setRandomObject] = useState(null);
 
   const handleClick = () => {
@@ -35,26 +67,54 @@ function EmojiPage() {
     setRandomObject(randomObj);
   };
 
+  const greeting = (
+    <picture className="ml-2 mr-5">
+      <source
+        srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f917/512.webp"
+        type="image/webp"
+      />
+      <img
+        src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f917/512.gif"
+        alt="🤗"
+        width="32"
+        height="32"
+      />
+    </picture>
+  );
+
   return (
     <Fragment>
-      {/* <div className="container text-center">
-        <div className="row">
-          {myarray.map((item) => (
-            <div className="col">{item}</div>
-          ))}
+      {!randomObject && (
+        <div className="position-relative mt-20">
+          <div className="position-absolute top-0 start-50 translate-middle">
+            <span className="ml-[10px] flex">
+              Hi {greeting} click the button and it will shown a random emoji
+            </span>
+          </div>
         </div>
-      </div> */}
-      <div className="container text-center">
+      )}
+      <div className="container text-center mt-3">
         <div className="row">
-          <div className="col">Column</div>
-          <div className="col">Column</div>
-          <div className="col">Column</div>
+          {randomObject &&
+            emoji.map((item, name) => (
+              <div className="col" key={keys}>
+                <img src={item} width="100px" height="100px" />
+                <p>{emojiName[name]}</p>
+              </div>
+            ))}
         </div>
       </div>
-      {randomObject && <p>{randomObject}</p>}
-      <button className="btn btn-outline-primary btn-lg" onClick={handleClick}>
-        click here
-      </button>
+      <div className="position-relative mt-[15rem] text-center">
+        <div className="position-absolute top-50 start-50 translate-middle">
+          {randomObject && <p>{randomObject}</p>}
+          <button
+            className="btn btn-outline-primary btn-lg"
+            onClick={handleClick}
+          >
+            click here
+          </button>
+        </div>
+      </div>
     </Fragment>
   );
 }
